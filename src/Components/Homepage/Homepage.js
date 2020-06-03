@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Homepage.css';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 import { Switch } from 'react-mdl';
-import { Layout, Header, Navigation, Drawer, Content } from "react-mdl";
+import { Layout, Header, Navigation, Content } from "react-mdl";
 import LandingPage from '../LandingPage/LandingPage';
 import Background from '../Images/damir-spanic-uytHnZAKNWQ-unsplash.jpg';
 import Services from '../Services/Services';
@@ -11,6 +11,8 @@ import AboutUs from '../AboutUs/AboutUs';
 import Blog from '../Blog/Blog';
 import Pricing from '../Pricing/Pricing';
 import ContactUs from '../ContactUs/ContactUs';
+import CreditCard from '../CreditCard/CreditCard';
+import FormValidation from '../FormValidation/FormValidation';
 
 class Homepage extends Component {
     render() {
@@ -27,6 +29,8 @@ class Homepage extends Component {
                     <a href="/blog">Blog</a>
                     <a href="/pricing">Pricing</a>
                     <a href="/contact-us">Contact Us</a>
+                    <a href="/credit-card">Credit Cards</a>
+                    <a href="/formValidation">Form Validation</a>
                 </Navigation>
             </Header>
             
@@ -55,6 +59,12 @@ class Homepage extends Component {
                             </Route>
                             <Route path="/contact-us">
                                 <ContactUs></ContactUs>
+                            </Route>
+                            <Route path="/credit-card">
+                                <CreditCard></CreditCard>
+                            </Route>
+                            <Route path="/formValidation">
+                                <FormValidation></FormValidation>
                             </Route>
                         </Switch>
                     </Router>
